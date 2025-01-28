@@ -1,3 +1,4 @@
+import { formatCurrency } from "../helpers"
 import { OrderItem } from "../types/types"
 
 type OrderContentProps = {
@@ -15,7 +16,7 @@ export default function OrderContents({order} : OrderContentProps) {
                 : (
                     order.map(item => (
                         <div key={item.id}>
-                            <p>{item.name} - {item.price}€</p>
+                            <p>{item.name} - {formatCurrency(item.price)}</p>
                         </div>
                     ))
                 )}
