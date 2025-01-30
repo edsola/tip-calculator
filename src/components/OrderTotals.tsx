@@ -22,7 +22,7 @@ export default function OrderTotals({order, tip, placeOrder} : OrderTotalsProps)
     return (
         <>
             <div className="space-y-3">
-                <h2 className="font-black text-2xl">Precio total y propinas</h2>
+                <h2 className="text-indigo-400 font-black text-2xl">Precio total y propinas</h2>
                 <p>Subtotal a pagar: {''}
                     <span className="font-bold">{ formatCurrency(subtotalAmount) }</span>
                 </p>
@@ -38,7 +38,7 @@ export default function OrderTotals({order, tip, placeOrder} : OrderTotalsProps)
             </div>
 
             <button
-                className="w-full bg-black p-3 uppercase text-white font-bold mt-10 disabled:opacity-10"
+                className="w-full bg-indigo-600 rounded-lg p-3 uppercase text-white font-bold mt-10 disabled:opacity-10"
                 disabled={totalAmount === 0}
                 onClick={placeOrder}
             >
